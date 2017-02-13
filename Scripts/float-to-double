@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sed 's/Complexf/Complexd/g;s/Mat2f/Mat2d/g;s/Mat3f/Mat3d/g;s/Mat4f/Mat4d/g;s/Vec2f/Vec2d/g;s/Vec3f/Vec3d/g;s/Vec4f/Vec4d/g;' $1 \
+		| sed 's/Float/Double/g' \
+		| sed 's/cosf/cos/g;s/sinf/sin/g;s/tanf/tan/g;s/sqrtf/sqrt/g' \
+		> $2
